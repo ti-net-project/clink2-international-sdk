@@ -114,7 +114,13 @@ public enum PathEnum {
     // webcall
     Webcall("webcall"),
     //状态统计报表
-    StatClientStatus("stat_client_status");
+    StatClientStatus("stat_client_status"),
+
+    // 下载留言录音文件
+    DownloadCommentFile("download_comment_file"),
+
+    // 查询留言录音url
+    DescribeCommentFileUrl("describe_comment_file_url");
 
     private String value;
 
