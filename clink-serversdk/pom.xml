@@ -7,7 +7,7 @@
     <groupId>com.ti-net</groupId>
     <artifactId>clink-serversdk</artifactId>
     <version>2.0.26-international</version>
-    
+
     <name>Clink Open API Java SDK</name>
     <description>Clink Open API Java SDK is used for simplify the development for clink open api access.</description>
     <url>https://github.com/tinet-wangzb/clink2-opensdk</url>
