@@ -46,9 +46,9 @@ public class CreateBusinessRequest extends AbstractRequestModel<CreateBusinessRe
     private Integer status;
 
     /**
-     * 指定处理坐席号
+     * 处理人工号
      */
-    private Integer handlerCno;
+    private String handlerCno;
 
     /**
      * 描述
@@ -141,11 +141,11 @@ public class CreateBusinessRequest extends AbstractRequestModel<CreateBusinessRe
         }
     }
 
-    public Integer getHandlerCno() {
+    public String getHandlerCno() {
         return handlerCno;
     }
 
-    public void setHandlerCno(Integer handlerCno) {
+    public void setHandlerCno(String handlerCno) {
         this.handlerCno = handlerCno;
         if (handlerCno != null) {
             putQueryParameter("handlerCno", handlerCno);

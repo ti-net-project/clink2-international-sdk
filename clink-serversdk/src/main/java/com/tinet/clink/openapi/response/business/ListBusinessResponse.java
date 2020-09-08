@@ -1,6 +1,6 @@
 package com.tinet.clink.openapi.response.business;
 
-import com.tinet.clink.openapi.model.BusinessModel;
+import com.tinet.clink.openapi.model.ListBusinessModel;
 import com.tinet.clink.openapi.response.PagedResponse;
 
 import java.util.List;
@@ -11,13 +11,13 @@ import java.util.List;
  */
 public class ListBusinessResponse extends PagedResponse {
 
-    private List<BusinessModel> businesses;
+    private List<ListBusinessModel> businesses;
 
-    public List<BusinessModel> getBusinesses() {
+    public List<ListBusinessModel> getBusinesses() {
         return businesses;
     }
 
-    public void setBusinesses(List<BusinessModel> businesses) {
+    public void setBusinesses(List<ListBusinessModel> businesses) {
         this.businesses = businesses;
     }
 }

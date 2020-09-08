@@ -47,6 +47,26 @@ public class ListBusinessRequest extends AbstractRequestModel<ListBusinessRespon
     private String customerNameOrTel;
 
     /**
+     * 优先级.   0:高, 1:中, 2:低
+     */
+    private Integer priority;
+
+    /**
+     * 状态.   0:新建, 1:暂缓, 2:升级, 3:关闭
+     */
+    private Integer status;
+
+    /**
+     * 处理人姓名或者工号
+     */
+    private String handlerNameOrCno;
+
+    /**
+     * 描述
+     */
+    private String description;
+
+    /**
      * 查询限制数量
      */
     private Integer limit;
@@ -150,6 +170,50 @@ public class ListBusinessRequest extends AbstractRequestModel<ListBusinessRespon
         this.offset = offset;
         if (offset != null) {
             putQueryParameter("offset", offset);
+        }
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+        if (priority != null) {
+            putQueryParameter("priority", priority);
+        }
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+        if (status != null) {
+            putQueryParameter("status", status);
+        }
+    }
+
+    public String getHandlerNameOrCno() {
+        return handlerNameOrCno;
+    }
+
+    public void setHandlerNameOrCno(String handlerNameOrCno) {
+        this.handlerNameOrCno = handlerNameOrCno;
+        if (handlerNameOrCno != null) {
+            putQueryParameter("handlerNameOrCno", handlerNameOrCno);
+        }
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+        if (description != null) {
+            putQueryParameter("description", description);
         }
     }
 }

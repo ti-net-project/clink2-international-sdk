@@ -6,20 +6,25 @@ import java.util.Date;
  * @author zhangxy13@asiainfo-int.com
  * @date 2020/09/01
  */
-public class BusinessModel {
+public class ListBusinessModel {
 
     /**
-     * 自增主键
+     * 主键id
      */
     private Integer id;
 
     /**
-     * 客户姓名
+     * 来源
+     */
+    private Integer source;
+
+    /**
+     * 客户名称
      */
     private String customerName;
 
     /**
-     * 客户电话
+     * 客户手机号码
      */
     private String[] customerTel;
 
@@ -29,34 +34,24 @@ public class BusinessModel {
     private String topic;
 
     /**
-     * 创建人
+     * 创建者
      */
     private String creator;
 
     /**
-     * 修改人
+     * 修改者
      */
     private String modifier;
 
     /**
-     * 来源
+     * 创建时间
      */
-    private Integer source;
+    private Long createTime;
 
     /**
      * 自定义字段
      */
     private IdValueNameType[] customize;
-
-    /**
-     * 记录创建时间
-     */
-    private Date createTime;
-
-    /**
-     * 记录修改时间
-     */
-    private Date updateTime;
 
     /**
      * 优先级.   0:高, 1:中, 2:低
@@ -67,11 +62,6 @@ public class BusinessModel {
      * 状态.   0:新建, 1:暂缓, 2:升级, 3:关闭
      */
     private Integer status;
-
-    /**
-     * 处理人工号
-     */
-    private String handlerCno;
 
     /**
      * 处理人
@@ -89,6 +79,14 @@ public class BusinessModel {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getSource() {
+        return source;
+    }
+
+    public void setSource(Integer source) {
+        this.source = source;
     }
 
     public String getCustomerName() {
@@ -123,20 +121,12 @@ public class BusinessModel {
         this.creator = creator;
     }
 
-    public String getModifier() {
-        return modifier;
+    public Long getCreateTime() {
+        return createTime;
     }
 
-    public void setModifier(String modifier) {
-        this.modifier = modifier;
-    }
-
-    public Integer getSource() {
-        return source;
-    }
-
-    public void setSource(Integer source) {
-        this.source = source;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
     public IdValueNameType[] getCustomize() {
@@ -145,22 +135,6 @@ public class BusinessModel {
 
     public void setCustomize(IdValueNameType[] customize) {
         this.customize = customize;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
     }
 
     public Integer getPriority() {
@@ -179,12 +153,20 @@ public class BusinessModel {
         this.status = status;
     }
 
-    public String getHandlerCno() {
-        return handlerCno;
+    public String getDescription() {
+        return description;
     }
 
-    public void setHandlerCno(String handlerCno) {
-        this.handlerCno = handlerCno;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getModifier() {
+        return modifier;
+    }
+
+    public void setModifier(String modifier) {
+        this.modifier = modifier;
     }
 
     public String getHandler() {
@@ -193,13 +175,5 @@ public class BusinessModel {
 
     public void setHandler(String handler) {
         this.handler = handler;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 }
