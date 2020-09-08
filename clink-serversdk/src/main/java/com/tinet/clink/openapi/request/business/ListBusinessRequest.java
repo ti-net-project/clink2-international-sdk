@@ -13,6 +13,11 @@ import com.tinet.clink.openapi.utils.HttpMethodType;
  */
 public class ListBusinessRequest extends AbstractRequestModel<ListBusinessResponse> {
     /**
+     * 主题
+     */
+    private String topic;
+
+    /**
      * 业务记录自定义字段信息
      */
     private String businessParams;
@@ -214,6 +219,17 @@ public class ListBusinessRequest extends AbstractRequestModel<ListBusinessRespon
         this.description = description;
         if (description != null) {
             putQueryParameter("description", description);
+        }
+    }
+
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+        if (topic != null) {
+            putQueryParameter("topic", topic);
         }
     }
 }
