@@ -1,7 +1,5 @@
 package com.tinet.clink.openapi.model;
 
-import java.util.Date;
-
 /**
  * @author zhangxy13@asiainfo-int.com
  * @date 2020/09/01
@@ -47,6 +45,11 @@ public class ListBusinessModel {
      * 创建时间
      */
     private Long createTime;
+
+    /**
+     * 修改时间
+     */
+    private Long updateTime;
 
     /**
      * 自定义字段
@@ -175,5 +178,13 @@ public class ListBusinessModel {
 
     public void setHandler(String handler) {
         this.handler = handler;
+    }
+
+    public Long getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Long updateTime) {
+        this.updateTime = updateTime;
     }
 }
