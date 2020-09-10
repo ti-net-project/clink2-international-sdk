@@ -72,6 +72,11 @@ public class CdrInvestigationModel {
      */
     private Integer keys;
 
+    /**
+     * 录音地址
+     */
+    private String recordFile;
+
     public String getMainUniqueId() {
         return mainUniqueId;
     }
@@ -174,5 +179,13 @@ public class CdrInvestigationModel {
 
     public void setKeys(Integer keys) {
         this.keys = keys;
+    }
+
+    public String getRecordFile() {
+        return recordFile;
+    }
+
+    public void setRecordFile(String recordFile) {
+        this.recordFile = recordFile;
     }
 }
