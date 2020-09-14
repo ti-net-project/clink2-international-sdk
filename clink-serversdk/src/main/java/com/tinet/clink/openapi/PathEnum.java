@@ -120,7 +120,16 @@ public enum PathEnum {
     DownloadCommentFile("download_comment_file"),
 
     // 查询留言录音url
-    DescribeCommentFileUrl("describe_comment_file_url");
+    DescribeCommentFileUrl("describe_comment_file_url"),
+
+    // 获取业务记录自定义字段
+    ListBusinessCustomizeField("list_business_customize_field"),
+    // 查询业务记录信息
+    ListBusiness("list_business"),
+    // 更新业务记录
+    UpdateBusiness("update_business"),
+    // 创建业务记录
+    CreateBusiness("create_business");
 
     private String value;
 

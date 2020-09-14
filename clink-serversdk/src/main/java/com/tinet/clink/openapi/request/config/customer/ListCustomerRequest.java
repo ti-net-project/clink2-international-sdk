@@ -48,6 +48,16 @@ public class ListCustomerRequest extends AbstractRequestModel<ListCustomerRespon
      */
     private Integer limit;
 
+    /**
+     * 队列id列表
+     */
+    private String queueIds;
+
+    /**
+     * 座席id
+     */
+    private String clientIds;
+
     public ListCustomerRequest() {
         super(PathEnum.ListCustomers.value(), HttpMethodType.GET);
     }
@@ -131,6 +141,28 @@ public class ListCustomerRequest extends AbstractRequestModel<ListCustomerRespon
         this.updateEndTime = updateEndTime;
         if (updateEndTime != null) {
             putQueryParameter("updateEndTime", updateEndTime);
+        }
+    }
+
+    public String getQueueIds() {
+        return queueIds;
+    }
+
+    public void setQueueIds(String queueIds) {
+        this.queueIds = queueIds;
+        if (queueIds != null) {
+            putQueryParameter("queueIds", queueIds);
+        }
+    }
+
+    public String getClientIds() {
+        return clientIds;
+    }
+
+    public void setClientIds(String clientIds) {
+        this.clientIds = clientIds;
+        if (clientIds != null) {
+            putQueryParameter("clientIds", clientIds);
         }
     }
 }

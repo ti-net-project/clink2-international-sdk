@@ -1,10 +1,10 @@
 package com.tinet.clink.openapi.model;
 
 /**
- * @author lizy
- * @date 2020/01/09
+ * @author zhangxy13@asiainfo-int.com
+ * @date 2020/09/01
  */
-public class CustomerFieldModel {
+public class BusinessFieldModel {
 
     /**
      * 主键id

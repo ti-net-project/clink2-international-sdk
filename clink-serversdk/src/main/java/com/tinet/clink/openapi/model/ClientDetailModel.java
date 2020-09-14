@@ -104,6 +104,11 @@ public class ClientDetailModel {
     private Integer type;
 
     /**
+     * 座席指定号码
+     */
+    private String clidAssignValue;
+
+    /**
      * 在线客服座席会话上限开关，0：关闭、1：开启
      */
     private Integer chatLimit;
@@ -274,6 +279,13 @@ public class ClientDetailModel {
         this.chatLimitNum = chatLimitNum;
     }
 
+    public String getClidAssignValue() {
+        return clidAssignValue;
+    }
+
+    public void setClidAssignValue(String clidAssignValue) {
+        this.clidAssignValue = clidAssignValue;
+    }
 
     @Override
     public String toString() {

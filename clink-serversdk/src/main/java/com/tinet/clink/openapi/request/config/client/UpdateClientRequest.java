@@ -102,6 +102,11 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
     private Integer recurrentselectionValue;
 
     /**
+     * 座席指定号码
+     */
+    private String clidAssignValue;
+
+    /**
      * 座席权限设置
      */
     private ClientPermission permission;
@@ -322,6 +327,17 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
         this.permission = permission;
         if (permission != null) {
             putBodyParameter("permission", permission);
+        }
+    }
+
+    public String getClidAssignValue() {
+        return clidAssignValue;
+    }
+
+    public void setClidAssignValue(String clidAssignValue) {
+        this.clidAssignValue = clidAssignValue;
+        if (clidAssignValue != null) {
+            putBodyParameter("clidAssignValue", clidAssignValue);
         }
     }
 
