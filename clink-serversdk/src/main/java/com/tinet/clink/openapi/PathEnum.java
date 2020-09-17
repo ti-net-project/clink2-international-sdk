@@ -131,7 +131,9 @@ public enum PathEnum {
     // 创建业务记录
     CreateBusiness("create_business"),
     // 查询企业置忙状态
-    ListEnterprisePauseStatus("list_enterprise_pause_status");
+    ListEnterprisePauseStatus("list_enterprise_pause_status"),
+    // 查询满意度配置
+    InvestigationSetting("investigation_setting");
 
     private String value;
 
