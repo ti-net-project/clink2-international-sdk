@@ -100,6 +100,11 @@ public class CdrIbRecordModel {
     private String status;
 
     /**
+     * 接听状态原始值
+     */
+    private Integer statusOriginValue;
+
+    /**
      * 挂机原因 1000主通道挂机 1001非主通道挂机 1002被强拆
      */
     private String endReason;
@@ -320,5 +325,13 @@ public class CdrIbRecordModel {
 
     public void setTags(String[] tags) {
         this.tags = tags;
+    }
+
+    public Integer getStatusOriginValue() {
+        return statusOriginValue;
+    }
+
+    public void setStatusOriginValue(Integer statusOriginValue) {
+        this.statusOriginValue = statusOriginValue;
     }
 }
