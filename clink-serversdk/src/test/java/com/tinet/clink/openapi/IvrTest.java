@@ -31,7 +31,7 @@ public class IvrTest extends AbstractTest{
         ListIvrsRequest request = new ListIvrsRequest();
 
         ListIvrsResponse response = client.getResponseModel(request);
-        System.out.println(mapper.writeValueAsString(response.getListIvrs()));
+        System.out.println(mapper.writeValueAsString(response.getIvrs()));
     }
 
     /**
@@ -44,7 +44,7 @@ public class IvrTest extends AbstractTest{
         request.setIvrId(1);
 
         ListIvrNodesResponse response = client.getResponseModel(request);
-        System.out.println(mapper.writeValueAsString(response.getListIvrNodes()));
+        System.out.println(mapper.writeValueAsString(response.getIvrNodes()));
     }
 
 }
