@@ -73,6 +73,11 @@ public class UpdateCustomerRequest extends AbstractRequestModel<UpdateCustomerRe
      */
     private IdValue[] customize;
 
+    /**
+     * 修改人id
+     */
+    private String cno;
+
     public Integer getId() {
         return id;
     }
@@ -215,6 +220,18 @@ public class UpdateCustomerRequest extends AbstractRequestModel<UpdateCustomerRe
 
         if (externalId != null) {
             putBodyParameter("externalId", externalId);
+        }
+    }
+
+    public String getCno() {
+        return cno;
+    }
+
+    public void setCno(String cno) {
+        this.cno = cno;
+
+        if (cno != null) {
+            putBodyParameter("cno", cno);
         }
     }
 
