@@ -67,6 +67,11 @@ public class CreateCustomerRequest extends AbstractRequestModel<CreateCustomerRe
      */
     private IdValue[] customize;
 
+    /**
+     * 创建人id
+     */
+    private String cno;
+
 
     public String getName() {
         return name;
@@ -198,6 +203,18 @@ public class CreateCustomerRequest extends AbstractRequestModel<CreateCustomerRe
 
         if (externalId != null) {
             putBodyParameter("externalId", externalId);
+        }
+    }
+
+    public String getCno() {
+        return cno;
+    }
+
+    public void setCno(String cno) {
+        this.cno = cno;
+
+        if (cno != null) {
+            putBodyParameter("cno", cno);
         }
     }
 
