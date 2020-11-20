@@ -14,14 +14,19 @@ import com.tinet.clink.openapi.utils.HttpMethodType;
 public class ListInvestigationsRequest extends AbstractRequestModel<ListInvestigationsResponse> {
 
     /**
+     * 坐席号码
+     */
+    private String cno;
+
+    /**
      * 客户号码
      */
     private String customerNumber;
 
     /**
-     * 热线号码
+     * 评分值
      */
-    private String hotline;
+    private Integer investigationKeys;
 
     /**
      * 开始时间，时间戳格式精确到秒。默认值取当前月份第一天
@@ -38,6 +43,12 @@ public class ListInvestigationsRequest extends AbstractRequestModel<ListInvestig
      * 0: 不隐藏，1: 中间四位，2: 最后八位，3: 全部号码，4: 最后四位。默认值为 0
      */
     private Integer hiddenType;
+
+    /**
+     * 呼叫类型
+     * 呼入：ib， 呼出：ob
+     */
+    private String cdrType;
 
     /**
      * 偏移量，范围 0-99990。默认值为 0，但limit + offset 不允许超过100000
@@ -75,14 +86,14 @@ public class ListInvestigationsRequest extends AbstractRequestModel<ListInvestig
         }
     }
 
-    public String getHotline() {
-        return hotline;
+    public Integer getInvestigationKeys() {
+        return investigationKeys;
     }
 
-    public void setHotline(String hotline) {
-        this.hotline = hotline;
-        if (hotline != null) {
-            putQueryParameter("hotline", hotline);
+    public void setInvestigationKeys(Integer investigationKeys) {
+        this.investigationKeys = investigationKeys;
+        if (investigationKeys != null) {
+            putQueryParameter("investigationKeys", investigationKeys);
         }
     }
 
@@ -127,6 +138,28 @@ public class ListInvestigationsRequest extends AbstractRequestModel<ListInvestig
         this.limit = limit;
         if (limit != null) {
             putQueryParameter("limit", limit);
+        }
+    }
+
+    public String getCno() {
+        return cno;
+    }
+
+    public void setCno(String cno) {
+        this.cno = cno;
+        if (cno != null) {
+            putQueryParameter("cno", cno);
+        }
+    }
+
+    public String getCdrType() {
+        return cdrType;
+    }
+
+    public void setCdrType(String cdrType) {
+        this.cdrType = cdrType;
+        if (cdrType != null) {
+            putQueryParameter("cdrType", cdrType);
         }
     }
 

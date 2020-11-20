@@ -38,6 +38,11 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
     private String password;
 
     /**
+     * 坐席旧密码
+     */
+    private String oldPassword;
+
+    /**
      * 座席角色，0普通座席 1班长座席。默认普通座席
      */
     private Integer role;
@@ -184,6 +189,17 @@ public class UpdateClientRequest extends AbstractRequestModel<UpdateClientRespon
         this.password = password;
         if (password != null) {
             putBodyParameter("password", password);
+        }
+    }
+
+    public String getOldPassword() {
+        return oldPassword;
+    }
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+        if (oldPassword != null) {
+            putBodyParameter("oldPassword", password);
         }
     }
 

@@ -68,6 +68,11 @@ public class ClientDetailModel {
     private List<String> qnos;
 
     /**
+     * 队列名称
+     */
+    private List<String> qNames;
+
+    /**
      * 外显号
      */
     private List<String> clid;
@@ -287,6 +292,14 @@ public class ClientDetailModel {
         this.clidAssignValue = clidAssignValue;
     }
 
+    public List<String> getQNames() {
+        return qNames;
+    }
+
+    public void setQNames(List<String> qNames) {
+        this.qNames = qNames;
+    }
+
     @Override
     public String toString() {
         return "ClientDetailModel{" +
@@ -301,6 +314,7 @@ public class ClientDetailModel {
                 ", hiddenTel=" + hiddenTel +
                 ", permission=" + permission +
                 ", qnos=" + qnos +
+                ", qNames=" + qNames +
                 ", clid=" + clid +
                 ", clidType=" + clidType +
                 ", clidArea=" + clidArea +
@@ -308,6 +322,7 @@ public class ClientDetailModel {
                 ", recurrentselectionType=" + recurrentselectionType +
                 ", recurrentselectionValue=" + recurrentselectionValue +
                 ", type=" + type +
+                ", clidAssignValue='" + clidAssignValue + '\'' +
                 ", chatLimit=" + chatLimit +
                 ", chatLimitNum=" + chatLimitNum +
                 '}';
