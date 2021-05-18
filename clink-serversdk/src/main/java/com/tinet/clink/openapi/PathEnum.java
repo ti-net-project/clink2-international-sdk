@@ -106,6 +106,12 @@ public enum PathEnum {
 
     //短信发送
     SmsSend("sms_send"),
+    // 短信模板查看
+    SmsTemplate("sms_template"),
+    // 短信记录查看
+    SmsRecords("sms_records"),
+    // 短息重发
+    SmsResend("sms_resend"),
 
     //座席工作量报表
     StatClientWorkload("stat_client_workload"),
