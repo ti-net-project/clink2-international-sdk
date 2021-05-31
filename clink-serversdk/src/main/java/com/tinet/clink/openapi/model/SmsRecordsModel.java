@@ -47,6 +47,11 @@ public class SmsRecordsModel {
      */
     private Date createTime;
 
+    /**
+     * 收信人名称
+     */
+    private String receiverName;
+
 
     public Integer getId() {
         return id;
@@ -110,5 +115,13 @@ public class SmsRecordsModel {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
     }
 }
